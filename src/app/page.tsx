@@ -3,11 +3,13 @@ import './page.sass'
 import './globals.css'
 import Card from '../props/Card'
 
-import img from './a8.png'
+
+import Navbar from '../components/Navbar'
+
 export default function Home() {
     return (
         <main>
-
+            <Navbar/>
         </main>
     )
 }
