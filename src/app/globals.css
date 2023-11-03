@@ -1,27 +1,126 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    font-family: TT Hoves,sans-serif;
 }
+:root {
+    --twilight100: #020c13;
+    --stardust60: #e5e9ef;
+    --nebula100: #b5c0f6;
+    --stardust100: #d4dae4;
+    --supernebula: #8799ff;
+    --twilight60: #676d71;
+    --twilight80: #353d42;
+    --supernova: #f0f757;
+    --stardust40: #eef0f4;
+    --white: white;
+    --space40: #9a9eaf;
+    --twilight5: #f2f3f3;
+    --ultranebula: #637bff;
+    --meganebula: #3050ff;
+    --space: #010720;
+    --space100: #020c36;
+    --space60: #676d86;
+    --nebula90: #bcc6f7;
+    --nebula80: #c4cdf8;
+    --nebula70: #cbd3f9;
+    --nebula60: #d3d9fa;
+    --nebula50: #dadffb;
+    --nebula40: #e1e6fb;
+    --nebula30: #e9ecfc;
+    --nebula20: #f0f2fd;
+    --gradient3: rgba(212,218,228,.09);
+    --nebula10-101: #f9fafe;
+    --color: #f6f8fa;
+    --twilight-80: rgba(38,44,48,.8);
+    --twilight-60: #e5e9ef;
+    --twilight-90: #181c1f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.dropbtn {
+
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.dropdown-content {
+    position: absolute;
+    margin-top: 33px;
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+    animation-name: getVisible;
+    animation-duration: 500ms;
+}
+
+@keyframes getVisible {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+.navbar_list {
+    display: flex;
+}
+.dropdown {
+    display: var(--display);
+}
+.button-group {
+    margin-bottom: 15px;
+}
+.menu {
+    display: var(--display-menu);
+}
+@media (min-width: 500px) {
+    :root {
+        --display-menu: none;
+        --display-end: center;
+        --display: flex
+    }
+}
+
+@media (max-width: 870px) {
+    :root {
+        --display-menu: ;
+        --display-end: end;
+        --display: none
+    }
+}
+

@@ -1,0 +1,15 @@
+.containerModal {
+  justify-content: start;
+  display: flex;
+  background-color: rgb(2, 12, 19);
+  color: white;
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+}
+
+div[class=navbar_helper] {
+  height: 100vh;
+}
+
+/*# sourceMappingURL=modal.css.map */
