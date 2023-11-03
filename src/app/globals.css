@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
     font-family: TT Hoves,sans-serif;
 }
@@ -43,7 +44,6 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-
 
 .dropbtn {
 
@@ -123,4 +123,3 @@ body {
         --display: none
     }
 }
-
