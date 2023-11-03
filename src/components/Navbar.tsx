@@ -226,10 +226,10 @@ export default function Navbar() {
                         <div className='navbar_part action'>
                             <div className='button-group nav'>
                                 <div id='login' className='inline'>
-                                    <a id='tw' href="https://developer.modular.com/login"
+                                    <a href="https://developer.modular.com/login"
                                        className="button is-navbar is-secondary w-button"><span>Login</span></a>
                                     <a href="https://developer.modular.com/signup"
-                                       id='se' className="button is-navbar is-primary w-button">Sign
+                                       className="button is-navbar is-primary w-button">Sign
                                         Up</a>
                                 </div>
                                 <a href="#" id='menuOpen' onClick={handleClick} className="menu">Menu</a>
