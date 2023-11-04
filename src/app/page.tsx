@@ -10,6 +10,9 @@ export default function Home() {
     return (
         <main>
             <Navbar/>
+            <div>
+                Сайт пока делается
+            </div>
         </main>
     )
 }
