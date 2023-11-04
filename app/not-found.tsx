@@ -1,0 +1,28 @@
+import './globals.css'
+import './notFound.sass'
+import Navbar from '../components/Navbar'
+import page from './page'
+import {Metadata} from "next";
+import {Inter} from "next/font/google";
+
+const inter = Inter({ subsets: ['latin'] })
+export const metadata: Metadata = {
+    title: 'Not Found',
+    description: 'Not Found',
+}
+export default function NotFound() {
+    return (
+        <main>
+            <Navbar/>
+            <div className='main_container'>
+                <div className='notfound'>
+                    <div className='notfound-page'>
+                        <a>404</a>
+                        <a className='title-info'>Sorry, we were unable to find that page</a>
+                        <a className='redirect'>Start from <a href='/' className='found-page'>home page</a></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    )
+}
