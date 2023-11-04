@@ -4,6 +4,7 @@ import '../app/globals.css'
 import {useEffect} from "react";
 import React, { useState } from 'react';
 import Modal from './Modal'
+import './modal.sass'
 import {useModalState} from "@/hook/useModalState";
 export default function Navbar() {
 
@@ -14,34 +15,35 @@ export default function Navbar() {
 
         let menuOpen : any = document.getElementById('menuOpen')
         let menuClose : any = document.getElementById('menuClose')
+        let modal: any = document.getElementById('modal')
+        let modal_list: any = document.getElementById('modal_list')
 
 
-        function noVisible(container: any, propOne: any, propTwo: any) {
-            container.style.display = 'none'
-            propOne.style.display = 'none'
+        function noVisible( propTwo: any) {
             propTwo.style.display = 'inline'
+            modal.classList.remove('modal-no-ani')
+            modal.classList.add('modal-ani')
+
         }
-        function visible(container: any, propOne: any, propTwo: any) {
-            container.style.display = 'inline'
-            propOne.style.display = 'inline'
+        function visible( propTwo: any) {
             propTwo.style.display = 'none'
+            modal.classList.remove('modal-ani')
+            modal.classList.add('modal-no-ani')
         }
-
-
-        menuOpen.addEventListener('click', () => noVisible(login, menuOpen, menuClose))
-        menuClose.addEventListener('click', () => visible(login, menuOpen, menuClose))
+        menuOpen.addEventListener('click', () => noVisible(menuClose))
+        menuClose.addEventListener('click', () => visible(menuClose))
     })
 
     const handleClick = () => {
         onToggle();
         close()
-
     };
 
 
     return (
         <div className='navbar_helper'>
             <nav className='navbar'>
+                <Modal handleClick={handleClick} />
                 <div id='id' className='navbar_list'>
                     <div id='micro' className="dropdown navbar_list_item start_content navbar_dropdown ">
                         <button className="dropbtn navbar_link">Microphones</button>
@@ -226,14 +228,14 @@ export default function Navbar() {
                         <div className='navbar_part action'>
                             <div className='button-group nav'>
                                 <div id='login' className='inline'>
-                                    <a id='tw' href="https://developer.modular.com/login"
+                                    <a href="https://developer.modular.com/login"
                                        className="button is-navbar is-secondary w-button"><span>Login</span></a>
                                     <a href="https://developer.modular.com/signup"
-                                       id='se' className="button is-navbar is-primary w-button">Sign
+                                       className="button is-navbar is-primary w-button">Sign
                                         Up</a>
                                 </div>
-                                <a href="#" id='menuOpen' onClick={handleClick} className="menu">Menu</a>
-                                <a href="#" style={{display: 'none'}} id='menuClose' onClick={handleClick} className="menu">Close</a>
+                                    <a href="#" id='menuOpen' onClick={handleClick} className="menu">Menu</a>
+                                    <a href="#" style={{display: 'none'}} id='menuClose' onClick={handleClick} className="menu">Close</a>
                             </div>
                         </div>
                     </div>
