@@ -44,8 +44,6 @@ body {
     box-sizing: border-box;
 }
 
-
-
 @media (min-width: 500px) {
     :root {
         --display-menu: none;
@@ -64,5 +62,4 @@ body {
         display: none;
     }
 }
-
 
