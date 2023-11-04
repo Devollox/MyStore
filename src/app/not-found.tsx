@@ -18,8 +18,8 @@ export default function NotFound() {
                 <div className='notfound'>
                     <div className='notfound-page'>
                         <a>404</a>
-                        <a className='title-info'>Sorry, we were unable to find that page</a>
-                        <a className='redirect'>Start from <a href='/' className='found-page'>home page</a></a>
+                        <div className='title-info'>Sorry, we were unable to find that page</div>
+                        <div className='redirect'>Start from <a href='/' className='found-page'>home page</a></div>
                     </div>
                 </div>
             </div>
