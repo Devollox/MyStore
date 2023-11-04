@@ -4,7 +4,9 @@ import Navbar from '../components/Navbar'
 import page from './page'
 import {Metadata} from "next";
 import {Inter} from "next/font/google";
-
+import React from "react";
+import ImageLogo from '../components/Logo.png'
+import Image from "next/image";
 const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
     title: 'Not Found',
