@@ -1,10 +1,93 @@
-.containerModal
-  justify-content: start
+.modal-container-marging
   display: flex
-  background-color: rgb(2, 12, 19)
-  color: white
+  justify-content: end
+  height: 85px
   width: 100%
+  z-index: 100
+.contact-block
+  width: 100%
+  height: 100%
+  margin: auto
+.modal
   position: fixed
-  height: 100vh
-div[class='navbar_helper']
-  height: 100vh
+  top: 0px
+  right: 0
+  bottom: 0
+  left: 0
+  height: 0%
+  z-index: 1000
+  background: #020c13
+  display: flex
+  overflow: hidden
+  animation-duration: 2s
+.modal-font
+  margin-right: 32px
+  display: flex
+  justify-content: end
+  height: 85px
+  text-align: center
+  align-items: center
+.font
+  position: absolute
+  width: 100%
+.font-container
+  height: 100%
+  width: 100%
+  margin: 85px 24px 24px 24px
+  color: #676d71
+.w-inline-block-modal
+  height: 59px
+  margin-top: 10px
+  margin-bottom: 10PX
+  font-size: 2rem
+.inline-modal
+  margin-bottom: 10px
+  width: 100%
+  display: flex
+  justify-content: center
+.is-secondary
+  width: 80%
+.is-primary
+  width: 80%
+  margin-right: 15px
+.modal-ani
+  animation: get 2.5s forwards
+
+.modal-no-ani
+  animation: getNo 2.5s backwards
+
+@keyframes get
+  0%
+    height: 0%
+    color: #181c1f
+
+  100%
+    color: white
+    height: 100%
+
+
+@keyframes getNo
+  0%
+    height: 100%
+    color: white
+
+  100%
+    color: #181c1f
+    height: 0%
+
+.modal__content
+  width: 100%
+  max-width: 500px
+  background: #020c13
+  position: relative
+
+.modal__close-button:hover
+  transition: .3s
+  transform: rotate(180deg)
+
+.modal__title
+  font-size: 1.8rem
+  text-transform: uppercase
+
+.modal__description
+  font-size: 1.125rem
