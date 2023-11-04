@@ -48,7 +48,7 @@ export default function Navbar() {
                 <Modal handleClick={handleClick} />
                 <div id='id' className='navbar_list'>
                     <div className='logo'>
-                        <Image src={ImageLogo} alt='3' width={100} height={100}></Image>
+                        <Image src={ImageLogo} alt='3' width={125}></Image>
                     </div>
                     <div className='flex'>
                         <div id='micro' className="dropdown  navbar_list_item start_content navbar_dropdown ">
