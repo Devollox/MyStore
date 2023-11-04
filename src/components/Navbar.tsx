@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import Modal from './Modal'
 import './modal.sass'
 import {useModalState} from "@/hook/useModalState";
-import ImageLogo from "@/components/Logo.png";
+import ImageLogo from "@/components/Logo.svg";
 import Image from "next/image";
 export default function Navbar() {
 
