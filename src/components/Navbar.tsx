@@ -2,12 +2,13 @@
 import './navbar.sass'
 import '../app/globals.css'
 import {useEffect} from "react";
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Modal from './Modal'
 import './modal.sass'
 import {useModalState} from "@/hook/useModalState";
-import ImageLogo from "@/components/Logo.svg";
+import ImageLogo from "@/components/image/Logo.svg";
 import Image from "next/image";
+
 export default function Navbar() {
 
     const {isOpen, onToggle} = useModalState();
@@ -15,23 +16,25 @@ export default function Navbar() {
     useEffect(() => {
         let login: any = document.getElementById('login')
 
-        let menuOpen : any = document.getElementById('menuOpen')
-        let menuClose : any = document.getElementById('menuClose')
+        let menuOpen: any = document.getElementById('menuOpen')
+        let menuClose: any = document.getElementById('menuClose')
         let modal: any = document.getElementById('modal')
         let modal_list: any = document.getElementById('modal_list')
 
 
-        function noVisible( propTwo: any) {
+        function noVisible(propTwo: any) {
             propTwo.style.display = 'inline'
             modal.classList.remove('modal-no-ani')
             modal.classList.add('modal-ani')
 
         }
-        function visible( propTwo: any) {
+
+        function visible(propTwo: any) {
             propTwo.style.display = 'none'
             modal.classList.remove('modal-ani')
             modal.classList.add('modal-no-ani')
         }
+
         menuOpen.addEventListener('click', () => noVisible(menuClose))
         menuClose.addEventListener('click', () => visible(menuClose))
     })
@@ -45,7 +48,7 @@ export default function Navbar() {
     return (
         <div className='navbar_helper'>
             <nav className='navbar'>
-                <Modal handleClick={handleClick} />
+                <Modal handleClick={handleClick}/>
                 <div id='id' className='navbar_list'>
                     <div className='logo'>
                         <Image src={ImageLogo} alt='3' width={100}></Image>
@@ -76,7 +79,6 @@ export default function Navbar() {
                                                 Info
                                             </div>
                                         </div>
-
                                     </div>
                                 </a>
                             </div>
@@ -136,9 +138,11 @@ export default function Navbar() {
                                 </a>
                             </div>
                         </div>
-                        <div data-hover="true" data-delay="0" className="dropdown navbar_dropdown navbar_list_item w-dropdown">
+                        <div data-hover="true" data-delay="0"
+                             className="dropdown navbar_dropdown navbar_list_item w-dropdown">
                             <div className="navbar_dropdown-toggle w-dropdown-toggle" id="w-dropdown-toggle-0"
-                                 aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false" role="button">
+                                 aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false"
+                                 role="button">
                                 <a href="/engine" className="navbar_link w-inline-block">
                                     <div>Monitors</div>
                                 </a>
@@ -184,9 +188,11 @@ export default function Navbar() {
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M19.2858 2L4.28577 2L4.28577 22L20.2858 22L20.2858 3"
                                                       stroke="currentColor" stroke-width="2"></path>
-                                                <path d="M7.28577 10C7.95243 10 14.2302 10 17.2858 10" stroke="currentColor"
+                                                <path d="M7.28577 10C7.95243 10 14.2302 10 17.2858 10"
+                                                      stroke="currentColor"
                                                       stroke-width="2"></path>
-                                                <path d="M7.28577 15C7.75243 15 12.1469 15 14.2858 15" stroke="currentColor"
+                                                <path d="M7.28577 15C7.75243 15 12.1469 15 14.2858 15"
+                                                      stroke="currentColor"
                                                       stroke-width="2"></path>
                                             </svg>
                                             <div style={{marginLeft: '30px'}}>
@@ -197,9 +203,11 @@ export default function Navbar() {
                                 </a>
                             </div>
                         </div>
-                        <div data-hover="true" data-delay="0" className="navbar_dropdown dropdown navbar_list_item last_content w-dropdown">
+                        <div data-hover="true" data-delay="0"
+                             className="navbar_dropdown dropdown navbar_list_item last_content w-dropdown">
                             <div className="navbar_dropdown-toggle w-dropdown-toggle" id="w-dropdown-toggle-0"
-                                 aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false" role="button">
+                                 aria-controls="w-dropdown-list-0" aria-haspopup="menu" aria-expanded="false"
+                                 role="button">
                                 <a href="/engine" className="navbar_link w-inline-block">
                                     <div>Contact Sales</div>
                                 </a>
@@ -217,8 +225,9 @@ export default function Navbar() {
                                            className="button is-navbar is-primary w-button">Sign
                                             Up</a>
                                     </div>
-                                    <a href="#" id='menuOpen' onClick={handleClick} className="menu">Menu</a>
-                                    <a href="#" style={{display: 'none'}} id='menuClose' onClick={handleClick} className="menu">Close</a>
+                                    <a id='menuOpen' onClick={handleClick} className="menu">Menu</a>
+                                    <a style={{display: 'none'}} id='menuClose' onClick={handleClick}
+                                       className="menu">Close</a>
                                 </div>
                             </div>
                         </div>
