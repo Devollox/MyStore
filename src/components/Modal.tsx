@@ -2,13 +2,13 @@ import React from "react";
 import './modal.sass'
 
 
-export default function Modal (handleClick: any) {
+export default function Modal () {
     return (
         <div id='modal' className='modal'>
             <div className='modal-container-marging'>
                 <div className='modal-font'>
                     <div id='modal_list' className='navbar_list modal_list'>
-                        <a id='menuClose' onClick={handleClick}>Close</a>
+                        <a id='menuClose'>Close</a>
                     </div>
                 </div>
             </div>
@@ -29,11 +29,11 @@ export default function Modal (handleClick: any) {
                 </div>
                 <div className='contact-block'>
                     <div className='inline-modal'>
-                        <a href="https://developer.modular.com/login"
+                        <a href="/login"
                            className="button is-navbar is-secondary w-button"><span>Login</span></a>
                     </div>
                     <div id='login' className='inline-modal'>
-                        <a href="https://developer.modular.com/signup"
+                        <a href="/signup"
                            className="button is-navbar is-primary w-button">Sign
                             Up</a>
                     </div>

@@ -5,13 +5,10 @@ import {useEffect} from "react";
 import React, {useState} from 'react';
 import Modal from './Modal'
 import './modal.sass'
-import {useModalState} from "@/hook/useModalState";
 import ImageLogo from "@/components/image/Logo.svg";
 import Image from "next/image";
 
 export default function Navbar() {
-
-    const {isOpen, onToggle} = useModalState();
 
     useEffect(() => {
         let menuOpen: any = document.getElementById('menuOpen')
@@ -35,19 +32,13 @@ export default function Navbar() {
         menuClose.addEventListener('click', () => visible(menuClose))
     })
 
-    const handleClick = () => {
-        onToggle();
-        close()
-    };
-
-
     return (
         <div className='navbar_helper'>
             <nav className='navbar'>
-                <Modal handleClick={handleClick}/>
+                <Modal/>
                 <div id='id' className='navbar_list'>
                     <div className='logo'>
-                        <Image src={ImageLogo} alt='3' width={100}></Image>
+                        <a href="/"><Image src={ImageLogo} alt='3' width={100}></Image></a>
                     </div>
                     <div className='flex'>
                         <div id='micro' className="dropdown  navbar_list_item start_content navbar_dropdown ">
@@ -60,16 +51,16 @@ export default function Navbar() {
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M19.5714 3L4.57141 3L4.57141 15L20.5714 15L20.5714 4"
                                                       stroke="currentColor"
-                                                      stroke-width="2"></path>
+                                                      strokeWidth="2"></path>
                                                 <path d="M4.57153 15L4.57153 20L15.5715 20" stroke="currentColor"
-                                                      stroke-width="2"></path>
+                                                      strokeWidth="2"></path>
                                                 <path d="M15.5714 22V15H20.5714V22L18.0714 20.25L15.5714 22Z"
                                                       stroke="currentColor"
-                                                      stroke-width="2" stroke-linecap="square"></path>
-                                                <path d="M8.82141 11.25H9.12141" stroke="currentColor" stroke-width="2"
-                                                      stroke-linecap="square"></path>
-                                                <path d="M8.82141 6.75H9.12141" stroke="currentColor" stroke-width="2"
-                                                      stroke-linecap="square"></path>
+                                                      strokeWidth="2" strokeLinecap="square"></path>
+                                                <path d="M8.82141 11.25H9.12141" stroke="currentColor" strokeWidth="2"
+                                                      strokeLinecap="square"></path>
+                                                <path d="M8.82141 6.75H9.12141" stroke="currentColor" strokeWidth="2"
+                                                      strokeLinecap="square"></path>
                                             </svg>
                                             <div style={{marginLeft: '30px'}}>
                                                 Info
@@ -89,16 +80,16 @@ export default function Navbar() {
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M19.5714 3L4.57141 3L4.57141 15L20.5714 15L20.5714 4"
                                                       stroke="currentColor"
-                                                      stroke-width="2"></path>
+                                                      strokeWidth="2"></path>
                                                 <path d="M4.57153 15L4.57153 20L15.5715 20" stroke="currentColor"
-                                                      stroke-width="2"></path>
+                                                      strokeWidth="2"></path>
                                                 <path d="M15.5714 22V15H20.5714V22L18.0714 20.25L15.5714 22Z"
                                                       stroke="currentColor"
-                                                      stroke-width="2" stroke-linecap="square"></path>
-                                                <path d="M8.82141 11.25H9.12141" stroke="currentColor" stroke-width="2"
-                                                      stroke-linecap="square"></path>
-                                                <path d="M8.82141 6.75H9.12141" stroke="currentColor" stroke-width="2"
-                                                      stroke-linecap="square"></path>
+                                                      strokeWidth="2" strokeLinecap="square"></path>
+                                                <path d="M8.82141 11.25H9.12141" stroke="currentColor" strokeWidth="2"
+                                                      strokeLinecap="square"></path>
+                                                <path d="M8.82141 6.75H9.12141" stroke="currentColor" strokeWidth="2"
+                                                      strokeLinecap="square"></path>
                                             </svg>
                                             <div style={{marginLeft: '30px'}}>
                                                 Info
@@ -154,10 +145,10 @@ export default function Navbar() {
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M10.4286 2H12.4286H14.4286L16.4286 4.25V6.5L14.4286 11H10.4286L8.42859 6.5V4.25L10.4286 2Z"
-                                                    stroke="currentColor" stroke-width="2"></path>
+                                                    stroke="currentColor" strokeWidth="2"></path>
                                                 <path
                                                     d="M20.4286 22L16.9286 22L12.4286 22L3.42859 22L3.42859 18.5L7.92859 15L16.9286 15L21.4286 18.5L21.4286 21"
-                                                    stroke="currentColor" stroke-width="2"></path>
+                                                    stroke="currentColor" strokeWidth="2"></path>
                                             </svg>
                                             <div style={{marginLeft: '30px'}}>
                                                 About
@@ -168,12 +159,12 @@ export default function Navbar() {
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M2.5 7.40831L6.82014 3H17.1799L21.5 7.40831V16.5917L17.1799 21H6.82014L2.5 16.5917V7.40831Z"
-                                                    stroke="currentColor" stroke-width="2"></path>
+                                                    stroke="currentColor" strokeWidth="2"></path>
                                                 <path
                                                     d="M7.5 7.71781L11.7571 3H12.2429L16.5 7.71781V16.2822L12.2429 21H11.7571L7.5 16.2822V7.71781Z"
-                                                    stroke="currentColor" stroke-width="2"></path>
+                                                    stroke="currentColor" strokeWidth="2"></path>
                                                 <path d="M2.5 12C3.76667 12 15.1944 12 21 12" stroke="currentColor"
-                                                      stroke-width="2"></path>
+                                                      strokeWidth="2"></path>
                                             </svg>
                                             <div style={{marginLeft: '30px'}}>
                                                 Vision
@@ -183,13 +174,13 @@ export default function Navbar() {
                                             <svg width="17px" height="17px" viewBox="0 0 25 24" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M19.2858 2L4.28577 2L4.28577 22L20.2858 22L20.2858 3"
-                                                      stroke="currentColor" stroke-width="2"></path>
+                                                      stroke="currentColor" strokeWidth="2"></path>
                                                 <path d="M7.28577 10C7.95243 10 14.2302 10 17.2858 10"
                                                       stroke="currentColor"
-                                                      stroke-width="2"></path>
+                                                      strokeWidth="2"></path>
                                                 <path d="M7.28577 15C7.75243 15 12.1469 15 14.2858 15"
                                                       stroke="currentColor"
-                                                      stroke-width="2"></path>
+                                                      strokeWidth="2"></path>
                                             </svg>
                                             <div style={{marginLeft: '30px'}}>
                                                 Contact
@@ -221,8 +212,8 @@ export default function Navbar() {
                                            className="button is-navbar is-primary w-button">Sign
                                             Up</a>
                                     </div>
-                                    <a id='menuOpen' onClick={handleClick} className="menu">Menu</a>
-                                    <a style={{display: 'none'}} id='menuClose' onClick={handleClick}
+                                    <a id='menuOpen' className="menu">Menu</a>
+                                    <a style={{display: 'none'}} id='menuClose'
                                        className="menu">Close</a>
                                 </div>
                             </div>
