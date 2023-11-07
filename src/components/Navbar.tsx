@@ -14,13 +14,9 @@ export default function Navbar() {
     const {isOpen, onToggle} = useModalState();
 
     useEffect(() => {
-        let login: any = document.getElementById('login')
-
         let menuOpen: any = document.getElementById('menuOpen')
         let menuClose: any = document.getElementById('menuClose')
         let modal: any = document.getElementById('modal')
-        let modal_list: any = document.getElementById('modal_list')
-
 
         function noVisible(propTwo: any) {
             propTwo.style.display = 'inline'
@@ -57,7 +53,7 @@ export default function Navbar() {
                         <div id='micro' className="dropdown  navbar_list_item start_content navbar_dropdown ">
                             <button className="dropbtn navbar_link">Microphones</button>
                             <div className="dropdown-content">
-                                <a href="error">
+                                <a href="/error">
                                     <div className='block' style={{marginTop: 5}}>
                                         <div className='flex list'>
                                             <svg width="17px" height="17px" viewBox="0 0 25 24" fill="none"
@@ -236,5 +232,4 @@ export default function Navbar() {
             </nav>
         </div>
     )
-
 }
