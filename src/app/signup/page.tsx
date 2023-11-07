@@ -1,11 +1,11 @@
 import {Metadata} from "next";
-import Navbar from "@/components/Navbar";
+import NotFound from "@/app/error/page";
 export const metadata: Metadata = {
     title: 'Signup Console',
 }
 
 export default function Signup() {
     return (
-        <Navbar />
+        <NotFound />
     )
 }
