@@ -19,7 +19,6 @@ export default function Navbar() {
             propTwo.style.display = 'inline'
             modal.classList.remove('modal-no-ani')
             modal.classList.add('modal-ani')
-
         }
 
         function visible(propTwo: any) {
