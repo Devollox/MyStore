@@ -56,18 +56,6 @@ export default function App() {
                             <path d="m15 18-6-6 6-6"/>
                         </svg>
                     </button>
-                    <ul className="splide__pagination splide__pagination--ltr" role="tablist"
-                        aria-label="Select a slide to show">
-                        <li role="presentation">
-                            <button className="splide__pagination__page" type="button" role="tab"
-                                    aria-controls="splide01-slide01" aria-label="Go to slide 1" ></button>
-                        </li>
-                        <li role="presentation">
-                            <button className="splide__pagination__page is-active" type="button" role="tab"
-                                    aria-controls="splide01-slide02" aria-label="Go to slide 2"
-                                    aria-selected="true"></button>
-                        </li>
-                    </ul>
                 </div>
             </Splide>
         </div>
