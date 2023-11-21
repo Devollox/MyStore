@@ -10,10 +10,12 @@ import App from "@/components/App";
 
 export default function Home() {
     return (
-        <main>
-            <Navbar />
-            <App />
-            <Footer />
+        <main className='main'>
+            <div className='html'>
+                <Navbar />
+                <App />
+                <Footer />
+            </div>
         </main>
     )
 }

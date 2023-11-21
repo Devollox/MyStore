@@ -39,7 +39,7 @@ export default function Navbar() {
                     <div className='logo'>
                         <a href="/"><Image src={ImageLogo} alt='3' width={100}></Image></a>
                     </div>
-                    <div className='flex'>
+                    <div className='flex flex_box'>
                         <div id='micro' className="dropdown  navbar_list_item start_content navbar_dropdown ">
                             <button className="dropbtn navbar_link">Microphones</button>
                             <div className="dropdown-content">
@@ -204,7 +204,7 @@ export default function Navbar() {
                         <div>
                             <div className='navbar_part action'>
                                 <div className='button-group nav'>
-                                    <div id='login' className='inline'>
+                                    <div style={{display: 'none'}} id='login' className='inline'>
                                         <a href="/login"
                                            className="button is-navbar is-secondary w-button"><span>Login</span></a>
                                         <a href="/signup"

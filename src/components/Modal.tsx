@@ -15,10 +15,10 @@ export default function Modal () {
             <div className='font'>
                 <div className='font-container'>
                     <a href="/engine" className="w-inline-block-modal">
-                        <div className="w-inline-block-modal">Engine</div>
+                        <div className="w-inline-block-modal">Catalog</div>
                     </a>
                     <a href="/engine" className="w-inline-block-modal">
-                        <div className="w-inline-block-modal">Blog</div>
+                        <div className="w-inline-block-modal">Code</div>
                     </a>
                     <a href="/engine" className="w-inline-block-modal">
                         <div className="w-inline-block-modal">Company</div>
@@ -27,7 +27,7 @@ export default function Modal () {
                         <div style={{color: "white"}} className="w-inline-block-modal">Contact Sales 🔥</div>
                     </a>
                 </div>
-                <div className='contact-block'>
+                <div style={{display: 'none'}} className='contact-block'>
                     <div className='inline-modal'>
                         <a href="/login"
                            className="button is-navbar is-secondary w-button"><span>Login</span></a>
